@@ -24,8 +24,8 @@ export default function Home() {
   };
   return (
     <div className="flex flex-col justify-center items-center h-screen w-full  bg-gradient-to-r from-[#552b52] to-[#232b37]">
-      <div className="w-1/2 h-[80%] flex justify-center items-center">
-      <form className="bg-transparent h-[26rem] ">
+      <div className="w-1/2 h-[80%] max-[500px]:w-full flex justify-center items-center">
+      <form className="bg-transparent h-[26rem] max-[500px]:w-full max-[500px]:p-6 max-[900]:p-[39px]">
       <label style={{marginTop:"6rem"}}
 >
         <p className="label-txt">Enter Your Name</p>

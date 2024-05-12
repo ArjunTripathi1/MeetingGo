@@ -21,6 +21,7 @@ export default function LiveKitRoom1() {
   const [token, setToken] = useState("");
   const router=useRouter()
   const [name,setName]=useState<string|null>("")
+  console.log("🚀 ~ LiveKitRoom1 ~ name:", name)
   const searchParams = useSearchParams()
 
   useEffect(()=>{
@@ -43,7 +44,7 @@ export default function LiveKitRoom1() {
         console.error("A",e);
       }
     })();
-  }, []);
+  }, [name]);
 
   if (token === "") {
     return <div className='h-screen bg-black w-full flex justify-center items-center'>Connecting to the meeting</div>;
