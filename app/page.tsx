@@ -1,5 +1,4 @@
 "use client";
-import LiveKitRoom1 from "@/components/room";
 import { LiveKitRoom } from "@livekit/components-react";
 import { Room } from "livekit-server-sdk";
 import Image from "next/image";

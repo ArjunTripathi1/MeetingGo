@@ -20,9 +20,16 @@ export default function LiveKitRoom1() {
   const room = "quickstart-room";
   const [token, setToken] = useState("");
   const router=useRouter()
-  const searchParams = useSearchParams()
- 
-  const name = searchParams.get('name')
+  const [name,setName]=useState<string|null>("")
+  useEffect(() => {
+    if (typeof window !== 'undefined') { // Check if window is defined (client-side)
+      const searchParams = new URLSearchParams(window.location.search);
+      const nameParam = searchParams.get('name');
+      if (nameParam) {
+        setName(nameParam);
+      }
+    }
+  }, []);
   useEffect(() => {
     (async () => {
       try {
